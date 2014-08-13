@@ -19,9 +19,9 @@ $ ionic serve
 
 
 ## Contributors ##
-Scott Tuddenham
-Costas Vlahakis
-Margo Wright
+- Scott Tuddenham
+- Costas Vlahakis
+- Margo Wright
 
 ## License ##
 TBD
