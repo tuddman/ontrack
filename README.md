@@ -17,3 +17,11 @@ $ cd ontrack
 $ ionic serve
 ```
 
+
+## Contributors ##
+Scott Tuddenham
+Costas Vlahakis
+Margo Wright
+
+## License ##
+TBD
