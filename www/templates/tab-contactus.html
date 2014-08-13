@@ -1,0 +1,36 @@
+
+<ion-view title="Contact Us">
+          <div id ="tab-contact-us">
+    <ion-content>
+
+          <div id="contact-form">
+          <div class="row">
+            <div class="col">
+                   <h2>Let Us know what you think...</h2>
+              <button ng-click="sendMail()">Send Us an Email</button>
+            </div>
+          </div>
+
+        <br/>
+          <h2>OR</h2>
+        <br/>
+        
+          <div class="row">
+            <div class="col">
+              <textarea placeholder="Send Us a Message Directly..." ng-model="formData.message"></textarea>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <button class="send-feedback" ng-click="sendFeedback()">Send Feedback</button>
+            </div>
+          </div>
+
+          <label ng-show="uiFeedback">{{feedbackResponse}}</label>
+
+    </div>
+    </ion-content>
+    </div>
+</ion-view>

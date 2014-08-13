@@ -1,0 +1,951 @@
+/*
+ * REUSUABLE
+ *
+ */
+
+ /* HTML5 ✰ Boilerplate */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.nopad {
+    padding: 0;
+}
+
+.nopad-recursive * {
+    padding: 0;
+}
+
+.row {
+  padding: 0;
+}
+
+
+/*
+ * PAGE SPECIFIC
+ *
+ */
+.scroll {
+  height: 100%;
+}
+
+#assignmentWebView {
+  height: 100%;
+  width: 100%;
+}
+
+ #welcome {
+  background-color: #84b5ba;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ }
+
+.intro {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.intro p { 
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 20px;
+}
+
+.intro img {
+  margin: 20px 0;
+}
+
+.bottom {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #60a7b5;
+  padding: 50px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+
+.signup-btn {
+  width: 100%;
+  background-color: #4190b2;
+  padding: 50px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+
+
+#login {
+  background-color: #84b5ba;
+  width: 100%;
+  height: 100%;
+}
+
+#login input {
+  background-color: #60a7b5;
+  border: none;
+  width: 100%;
+  margin: 15px 30px;
+  padding: 35px 20px;
+  font-weight: 600;
+  color: #FFF;
+}
+
+#login input ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #bbd6dc;
+}
+#login input :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #bbd6dc;
+    opacity: 1;
+}
+#login input ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #bbd6dc;
+    opacity: 1;
+}
+#login input :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #bbd6dc;
+}
+
+#login input::-webkit-input-placeholder {
+    color: #bbd6dc;
+}
+
+#login button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  padding: 15px;
+  width: 100%;
+  margin: 20px 30px;
+  font-weight: 700;
+  font-family: Raleway, sans-serif;
+}
+
+/* onboarding style */
+
+#onboard-page {
+  background-color: #f1cdaa;
+  height: 100%;
+}
+
+#onboard-page input {
+  background-color: #fca96d;
+  border: none;
+  margin-bottom: 2px;
+  color: #fff;
+  padding: 25px 10px;
+  font-weight: bold;
+}
+
+#onboard-page input ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fed7bf;
+}
+#onboard-page input :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fed7bf;
+    opacity: 1;
+}
+#onboard-page input ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fed7bf;
+    opacity: 1;
+}
+#onboard-page input :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fed7bf;
+}
+
+#onboard-page input::-webkit-input-placeholder {
+    color: #fed7bf;
+}
+
+#onboard-page .checkbox input[type="checkbox"] {
+  border: 1px solid #fff;
+  margin-bottom: 2px;
+  padding: 0;
+  font-weight: bold;
+  border-radius: 20px;
+  float: right;
+  background-color: #fca96d;
+  border: none;
+}
+
+
+
+.item li {
+  padding: 0;
+}
+
+#onboard-page button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 700;
+  font-family: Raleway, sans-serif;
+}
+
+#onboard-page .cancel-btn{
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+#onboard-page .cancel-btn a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: underline;
+}
+
+#login .cancel-btn{
+  margin-top: 30px;
+  text-align: center;
+}
+
+#login .cancel-btn a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: underline;
+}
+
+#onboard-page .step1-wrapper .row{
+  margin: 0;
+  padding: 0;
+}
+
+
+#onboard-page .step-completion-bar {
+  background-color: #fca96d;
+  padding: 0;
+  margin-top: 30px;
+}
+
+#onboard-page .step-completion-bar .row {
+  padding: 0;
+}
+
+#onboard-page .step-completion-bar .amount-completed {
+  background-color: #fff;
+}
+
+
+#onboard-page .step3-wrapper .list .item {
+  background-color: #fca96d;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  padding: 15px 20px;
+  margin-bottom: 3px;
+}
+
+#onboard-page .checkbox input[type="checkbox"] {
+  background-color: #000;
+}
+
+
+.step-title p {
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.transcript-title {
+  margin: 10px 0;
+}
+
+.transcript-title p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height:13px;
+}
+
+.transcript-title h3 {
+  font-size: 12px;
+  color: #555;
+  padding-top: 5px;
+  font-family: Arial;
+}
+
+.cumulative-form li {
+  margin-top: 15px;
+  vertical-align: middle;
+}
+
+.cumulative-form input {
+  margin-top: 5px;
+}
+
+/*
+ * NOT PUT IN THERE PROPER PLACE YET
+ *
+ */
+
+
+
+/* courses tab style */
+
+#summarySection {
+  padding: 15px;
+  margin: 0;
+  background-color: #489bb7;
+  background-image:url('../img/bg.png');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.currentCourses h1 {
+ font-size: 16pt;
+ width: 100%;
+ color: #fff;
+ margin-bottom: 20px;
+ letter-spacing: 0.03em;
+ font-family: Raleway, sans-serif;
+}
+
+
+.currentCourses h2{
+  font-size: 8pt;
+  color: #ffc9ba;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.currentStatsHeader {
+  background: #e9f0f5;
+  font-color: #727475;
+  padding: 5px 0;
+}
+
+.currentStatsHeader h3 {
+  color: #727475;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 11px;
+  margin-top: 3px;
+  padding: 0 5px;
+}
+
+.GPA, .credits {
+  font-size: 19pt;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+
+.GPATitle h2 {
+  font-size: 8pt;
+  color: #ffc9ba;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.creditsTitle h2 {
+  font-size: 8pt;
+  color: #ffc9ba;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.courseListingBanner {
+  background: #e9f0f5;
+  padding: 2px 20px 5px 20px;
+}
+
+.add-course-btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  text-transform:uppercase;
+  padding: 1px 12% 5px 12%;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#course-form {
+  background: #fff;
+  border: 1px solid #d7dee2;
+  padding: 0;
+  margin: 0;
+}
+
+#course-form input {
+  border-right: 1px solid #d7dee2;
+}
+
+.course-list ul li {
+  padding: 0;
+  height: 60px;
+  margin: 2px 0;
+}
+
+.list-item:nth-child(even) {background: #f0f7fc}
+.list-item:nth-child(odd) {background: #FFF}
+
+
+.course-name {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 0 20px 15px;
+  line-height: 15px;
+}
+
+.course-name a {
+  color: #0d82b9;
+  text-decoration: none;
+}
+
+
+.grade-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  }
+
+.course-grade {
+  width: 60px;
+  border-radius: 70px;
+  height: 60px;
+  padding: 20px 0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 11px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #d6e1e8;
+}
+
+.credit-hours {
+  height: 60px;
+  font-size: 20px;
+  padding: 17px 0;
+  margin: 0 auto;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  background-color: #d6e1e8;
+  margin-right: 5%;
+}
+
+
+
+.grade-A {
+  background: #70b8af;
+  font-size: 20px;
+  color: #000;
+}
+.grade-B {
+  background: #91bec5;
+  font-size: 20px;
+  color: #000;
+}
+.grade-C {
+  background: #f1cdaa;
+  font-size: 20px;
+  color: #000;
+}
+.grade-D {
+  background: #f4a58f;
+  font-size: 20px;
+  color: #000;
+}
+.grade-F {
+  background: #f4948f;
+  font-size: 20px;
+  color: #000;
+}
+
+/* navigation bar */
+
+.tabs-icon-top {
+  background-color: #000;
+}
+
+.tab-item i.icon.ion-ios7-close {
+  font-size: 26px;
+  padding-top: 4px;
+}
+
+.tab-item i.icon.ion-gear-a {
+  font-size: 28px;
+  padding-top: 3px;
+}
+
+.tab-item-active {
+  color: #000;
+}
+
+
+
+/* course-detail styles */
+
+ #course-detail {
+  background-color: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ }
+
+.page-header {
+  background-color: #4da1ba;
+  margin: 0;
+  width: 100%;
+  min-height: 80px;
+}
+
+.page-header h1 {
+  font-size: 16pt;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.grade-targeting {
+  min-height: 100px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
+.grade-targeting p {
+  line-height: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  margin: 30px 15px 0 0;
+  float:right;
+}
+
+.target-grade {
+  border-radius: 90px;
+  background-color: #70b8af;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  padding-top: 32px;
+  font-family: Arial, sans-serif;
+  font-size: 46px;
+  margin-top: -10px;
+}
+
+.estimate-grade {
+  float: left;
+  border-radius: 90px;
+  background-color: #d6e1e8;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  padding-top: 22px;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  margin-top: 12px;
+}
+
+.list-header {
+  background-color: #e9f0f5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.list-header p {
+  color: #727475;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+.ux-text {
+  padding: 8px;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid #d6e1e8;
+}
+
+.ux-text p {
+  color: #888;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.assignment-list {
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: lowercase;
+  font-family: Arial, sans-serif;
+  line-height: 15px;
+}
+
+.assignment-list .col {
+  border-right: 1px solid #d6e1e8;
+  position: relative;
+}
+
+.assignment-list .row {
+  min-height: 60px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.assignment-list .row:nth-child(even) {background: #f0f7fc}
+.assignment-list .row:nth-child(odd) {background: #FFF}
+
+.assignment-list .col:last-child {border-right:none;}
+
+.assignment-list h2 {
+  font-family: Arial, sans-serif;
+  line-height: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: absolute;
+  top: 25%;
+  height: 60px;
+}
+
+.assignment-list h2 a {
+  color: #0d82b9;
+  text-decoration: none;
+}
+
+
+.assignment-list p {
+  text-transform: capitalize;
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.input-grade {
+  width: 50px;
+  border-radius: 50px;
+  height: 50px;
+  padding: 15px 0;
+  font-weight: 400;
+  text-align: center;
+  font-size: 35px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #83949e;
+
+}
+
+/* course detail modal */
+
+.enter-grade {
+  padding: 40px;
+}
+
+.grade-selector h2 {
+  color: #8e99a0;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.grade-selector ul {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #cfd4d8;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.assignment-header h1 {
+  text-align: center;
+  font-size: 22px;
+  width: 100%;
+  border-bottom: 1px solid #cfd4d8;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.assignment-grade {
+  background-image: url("../img/assignment-grade.png");
+  height: 80px;
+  width: 80px;
+  background-color: #e2e5e7;
+  border-radius: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+.assignment-percentage {
+  background-image: url("../img/assignment-percentage.png");
+  height: 80px;
+  width: 80px;
+  background-color: #e2e5e7;
+  border-radius: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-indent: -999em;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.assignment-checkmark {
+  background-image: url("../img/assignment-checkmark.png");
+  height: 80px;
+  width: 80px;
+  background-color: #e2e5e7;
+  border-radius: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+.grade-submission {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #cfd4d8;
+}
+
+.grade-submission h2 {
+  color: #8e99a0;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.add-grade {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.enterGradeLetterGrade {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.letter-grade {
+  width: 80px;
+  border-radius: 70px;
+  height: 80px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 26px;
+  margin: 0 auto;
+  color: #000;
+  background-color: #e2e5e7;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  border: none;
+}
+
+.enterGradePercentage {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.enterGradePercentage input {
+  width: 75px;
+  height: 45px;
+  margin: 0 20px;
+  display: inline;
+}
+
+.enterGradeCheckMark{
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.check-minus {
+  background-image: url("../img/grade-check-minus.png");
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  background-color: #e2e5e7;
+  border: none;
+  text-indent: -999em;
+  overflow: hidden;
+  display: inline-block;
+  border: none;
+  border-radius: 100px;
+  background-position: center;
+}
+
+.check {
+  background-image: url("../img/grade-check.png");
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  background-color: #e2e5e7;
+  border: none;
+  text-indent: -999em;
+  overflow: hidden;
+  display: inline-block;
+  border: none;
+  border-radius: 100px;
+  background-position: center;
+  margin: 0 10px;
+}
+
+.check-plus {
+  background-image: url("../img/grade-check-plus.png");
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  background-color: #e2e5e7;
+  border: none;
+  text-indent: -999em;
+  overflow: hidden;
+  display: inline-block;
+  border: none;
+  border-radius: 100px;
+  background-position: center;
+}
+
+.submit-grade {
+  clear:both;
+  float: none;
+  background: #000;
+  border: none;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 1.3em;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: 700;
+  font-family: Raleway, sans-serif;
+}
+
+/* contact us styles */
+
+#tab-contact-us {
+  background-color: #84b5ba;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+#contact-form {
+  padding: 40px 20px;
+}
+
+#contact-form textarea {
+  background-color: #60a7b5;
+  padding: 10px;
+  color: #fff;
+  margin: 0 auto;
+  height: 100px;
+  width: 100%;
+  font-size: 16px;
+}
+
+#contact-form h2 {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+#contact-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  padding: 7px 0;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 700;
+  font-family: Raleway, sans-serif;
+}
+
+textarea ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #bbd6dc;
+}
+textarea :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #bbd6dc;
+    opacity: 1;
+}
+textarea ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #bbd6dc;
+    opacity: 1;
+}
+textarea :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #bbd6dc;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #bbd6dc;
+}
+
+
+

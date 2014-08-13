@@ -1,0 +1,72 @@
+<div class="step4-wrapper">
+
+    <div class="row">
+        <div class="step-completion-bar col col-80 col-offset-10">
+            <div class="row">
+                <div class="amount-completed col col-75"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-center">
+             <div class="step-title">
+                <p>STEP 3: GET TRANSCRIPT INFO</p>
+            </div>
+        </div>
+    </div>
+<ul class="cumulative-form">
+    <li>
+    <div class="row">
+        <div class="col col-40">
+            <div class="transcript-title">
+                <p>Cumulative GPA</p>
+                <h3>what is the GPA across all classes you had when you started this semester?</h3>
+            </div>
+        </div>
+        <div class="col col-20">
+            <input type="text" ng-pattern="/^[1-9][0-9]{0,2}(?:,?[0-9]{3}){0,3}(?:\.[0-9]{1,3})?$/" ng-model="formData.cumulativeGpa"/>
+        </div>
+    </div>
+    <span ng-show="formData.cumulativeGpa.$error.float">
+	          This is not a valid GPA.</span>
+    </li>
+
+    <li>
+        <div class="row">        
+            <div class="col col-40">
+                <div class="transcript-title">
+                    <p>Total Credits Completed</p>
+                    <h3>How many credits do you have towards graduation?</h3>   
+                </div>
+            </div>
+            <div class="col col-20">
+                <input type="text" ng-model="formData.cumulativeCredits" />
+            </div>
+        </div>
+    </li>
+    <!--
+    <li>
+    <div class="row">
+        <div class="col col-40">
+            <div class="transcript-title">
+                <p>Total Credits Attempted</p>
+                <h3>How many credits would you have if you count any credits for courses you dropped or did not pass?</h3>
+            </div>
+        </div>
+        <div class="col col-20">
+            <input type="tel" ng-model="formData.attemptedCredits" integer />
+        </div>
+    </div>
+    </li>
+    -->
+</ul>
+
+    <div class="row">
+        <div class="col">
+            <button ui-sref="onboard.step4" class="button">Next</button>
+            <div class="cancel-btn"><a href="#/welcome1">Cancel</a></div>
+        </div>
+    </div>
+
+</div>

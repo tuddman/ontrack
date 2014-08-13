@@ -1,0 +1,128 @@
+<ion-view title="">
+    <ion-content has-header="true" padding="false">
+
+    <div id="course-detail">
+
+        <div class="page-header">
+            <h1 class="title">{{course.courseName}}</h1>
+        </div>
+
+        <div class="grade-targeting">
+            <div class="row">
+                <div class="col">
+                    <p>course goal:</p>
+                </div>
+                <!--<div class="col"><div class="target-grade">{{accountModel.course.grade}}</div></div> -->
+                <div class="col"><div class="target-grade">{{course.relationship.grade}}</div></div>
+                <!--<div class="col col-50"><p>current</br>estimation</p><div class="estimate-grade">B+</div></div>-->
+            </div>
+        </div>
+
+        <div class="list-header">
+            <div class="row">
+                <div class="col col-55"><p>COURSE ASSIGNMENT</p></div>
+
+                <div class="col col-20"><p>Due</p></div>
+
+                <div class="col col-20"><p>Grade</p></div>
+            </div>
+        </div>
+
+        <div class="ux-text">
+            <div class="row">
+                <p>Add your assignment grade to track your progress</p>
+            </div>
+        </div>
+       
+        <div ng-controller="GradeEntryCtrl">
+            <div class="assignment-list">
+                <div class="row" ng-repeat="gradedevent in gradedevents">
+                    <div class="col col-55">
+                        <h2>
+                            <a href="{{gradedevent.url}}" target="_blank">{{gradedevent.title}}   ({{gradedevent.pctOfGrade}}%)</a>
+                        </h2>
+                    </div>
+
+                    <div class="col col-20">
+                        <p> {{ gradedevent.dueDate | amDateFormat:'MMM Do'}} </p>
+                        <!--  <p> {{ gradedevent.dueDate | amCalendar }} </p> -->
+                        <!--  <span am-time-ago="gradedevent.dueDate">   </span> -->
+                    </div>
+
+                    <div class="col col-20">
+                        <!--<div class="input-grade" ng-click="changeGradedEventGrade(gradedEvent)">-->
+                        <div class="input-grade" ng-click="openModal(gradedevent)">
+                            <div ng-show="gradedevent.properties.attained">
+                                {{gradedevent.properties.attained}}/{{gradedevent.properties.total}}
+                            </div>
+                            <div ng-show="gradedevent.properties.letterGrade">
+                                {{gradedevent.properties.letterGrade}}
+                            </div>
+                            <div ng-show="!gradedevent.properties">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    </ion-content>
+</ion-view>
+
+<script id="enterGrade-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <div class="enter-grade">
+            <div class="assignment-header">
+                <h1>{{gradedevent.title}}</h1>
+            </div>
+            <div class="grade-selector">
+                <h2>How were you graded for this assignment?</h2>
+                <ul>
+                    <li style="display:inline"><button ng-click='toggleGradeEntry("grade")' class="assignment-grade">grade</button></li>
+                    <li style="display:inline"><button ng-click='toggleGradeEntry("percent")' class="assignment-percentage">percent</button></li>
+                </ul>
+            </div>
+
+            <div class="grade-submission">
+
+                <div ng-hide="hideEnterGradeLetterGrade">
+                    <h2>What grade did you receive?</h2>
+                    <div class="course-grade grade-{{course.grade.substring(0,1)}}"
+                         ng-model="gradedevent.grade" ng-click="changeGradedEventGrade(gradedevent)">
+                        {{gradedevent.grade  || 'A' }}
+                    </div>
+                </div>
+
+                <div ng-hide="hideEnterGradePercentage">
+                    <h2>How did you score on this assignment?</h2>
+                    <div class="row">
+                        <div class="col-33">
+                            <input type="number" ng-model="grade.ptsAttained" />
+                        </div>
+                        <div class="col-33">
+                            <h2>out of</h2>
+                        </div>
+                        <div class="col-33">
+                            <input type="number" ng-model="grade.ptsTotal" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h5 style="color:red;">{{errMessage}}</h5>
+
+            <button class="submit-grade" ng-click="submitGrade()">Submit Grade</button>
+
+            <div class="row">
+                <div class="col">
+                    <a href="javascript:void(0);" ng-click="closeModal()">Cancel</a>
+                </div>
+            </div>
+
+        </div>
+    </ion-modal-view>
+</script>

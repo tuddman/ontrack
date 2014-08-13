@@ -1,0 +1,49 @@
+<div class="step1-wrapper">
+    <div class="row">
+        <div class="step-completion-bar col col-80 col-offset-10">
+            <div class="row">
+                <div class="amount-completed col col-25"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-center">
+            <div class="step-title">
+                <p>STEP 1: CREATE AN ACCOUNT</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="sign-up-form">
+                <label class="input">
+                    <input type="text" placeholder="{ First Name }" ng-model="formData.firstName">
+                </label>
+                <label class="input">
+                    <input type="text" placeholder="{ Last Name }" ng-model="formData.lastName">
+                </label>
+                <label class="input">
+                    <input type="email" placeholder="{ Email Address }" ng-model="formData.email" required>
+	            </label>
+                <label class="input">
+                    <input type="password" placeholder="{ Password }" ng-model="formData.password" required>
+                </label>
+                <label class="input">
+                    <input type="password" placeholder="{ Confirm Password }" ng-model="formData.passwordConfirmation" required>
+	            </label>
+		        <label ng-show="formData.passwordConfirmation && formData.password !== formData.passwordConfirmation">Passwords do not match</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button ui-sref="onboard.step2" class="button"
+            ng-disabled="!formData.email || !formData.password || formData.password !== formData.passwordConfirmation">Next</button>
+            <div ui-sref="welcome1" class="cancel-btn"><a href="#">Cancel</a></div>
+        </div>
+    </div>
+
+</div>

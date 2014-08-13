@@ -1,0 +1,111 @@
+<!-- <ion-view title="Current Courses"> -->
+
+
+<ion-view>
+  <ion-content>
+
+<div id="summarySection">
+
+<div class="row currentCourses">
+    <div class="col col-offset-25">
+       <div class="banner"><h1>Fall 2014</h1></div>
+    </div>
+</div>
+
+
+<div class="row currentCourses">
+</div>
+
+  <div class="row">
+	  <div class="col col-60">
+  	
+		<span class="GPA">  {{ accountModel.$getCumulativeGPA() }} </span>
+		<br />
+		<span class="GPATitle"><h2>Cumulative GPA</h2></span>
+
+     </div>	  
+      <div class="col col-40">
+		<span class="GPA">{{ accountModel.$getCurrentGPA() }} </span>
+		<br />
+		<div class="GPATitle"><h2>Current GPA</h2></div>
+	  </div>	  
+  </div>
+
+
+	<div class="row">
+		<div class="col col-60">
+            <span class="credits">{{ accountModel.$getTotalCumulativeCreditHours() }}</span>
+			<br />
+			<span class="GPATitle"><h2>Total Credits</h2></span>
+		</div>
+		<div class="col col-40">
+			<span class="credits">{{ accountModel.$getTotalCurrentCreditHours() }}</span>
+			<br />
+            <span class="GPATitle"><h2>Semester Credits</h2></span>				</div>
+	    </div>
+</div>	
+</div>
+</div>
+
+  <div controller="CoursesCtrl"> 
+
+    
+	<div class="row courseListingBanner">
+		<div class="col col-50 currentStatsHeader">
+		  <!-- <button class="add-course-btn"  ng-click="showCourseForm=!showCourseForm">Add Course <span style="font-size:17px"> +</span></button> -->
+		</div>
+		<div class="col col-25 currentStatsHeader">
+			<h3>TARGET GRADE </h3>
+		</div>
+		<div class="col col-15 currentStatsHeader">
+			<h3>CREDITS </h3>
+		</div>
+	</div>
+	<!--
+	<div id="course-form">
+		<form id="AddCourseForm" ng-submit="addCourse(newCourse.name, newCourse.grade, newCourse.credits)">
+
+		<div class="row" ng-hide="showCourseForm">
+			<div class="col col-50">
+				<input placeholder="Course Name" type="text" required ng-model="newCourse.name" placeholder="Class Name" />
+			</div>
+			<div class="col col-25">
+				<input type="text" required ng-model="newCourse.grade" placeholder="Grade" />
+			</div>
+			<div class="col col-15">
+				<input type="number" required ng-model="newCourse.credits" placeholder="Credits" />
+			</div>
+		</div>
+		</form>
+	</div>
+	-->
+	<div class="row nopad nopad-recursive">
+        <div class="col course-list">
+		<ul class="list">
+		    <li class="list-item"  ng-repeat="course in accountModel.courses | orderBy: 'course.courseName'">
+                    <div class="row">
+                        <div class="col col-50">
+				<div class="course-name">
+					<a href="#/tab/course/{{course.id}}">{{course.courseName}}</a>
+                            	</div>
+                        </div>
+                        <div class="col col-25">
+                        <div class="course-grade grade-{{course.grade.substring(0,1)}}" ng-model="course.grade" ng-click="changeGrade(course)">
+    						{{course.grade  || 'tap me' }}
+                        </div>
+                    	</div>
+                        <div class="col col-15 credit-hours">
+                            {{course.credits}}
+                        </div>
+
+                    </div>
+		    </li>
+            </ul>
+        </div>
+
+	</div>
+	
+
+  </div>
+  </ion-content>
+</ion-view>

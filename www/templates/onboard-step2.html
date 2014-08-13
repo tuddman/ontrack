@@ -1,0 +1,29 @@
+<div class="step2-wrapper">
+    <div class="row">
+        <div class="step-completion-bar col col-80 col-offset-10">
+            <div class="row">
+                <div class="amount-completed col col-50"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-center">
+             <div class="step-title">
+                <p>STEP 2: SELECT YOUR SCHOOL</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button ui-sref="onboard.step3" class="button" ng-repeat="school in schools" ng-click="$selectSchool(school)">{{school.name}}</button>
+    </div>
+        </div>
+
+         <div class="row">
+        <div class="col">
+            <div class="cancel-btn"><a href="#/welcome1">Cancel</a></div>
+        </div>
+    </div>
+</div>

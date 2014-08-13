@@ -1,0 +1,33 @@
+<div id="login">
+
+    <div class="row">
+        <div class="intro">
+            <img src="img/logo-transparent.png" width="180"/>
+            <p>Welcome to OnTrack!<br/>Your personal academic scoreboard</p>
+        </div>
+    </div>
+  
+    <div class="login-fields">
+        <div class="row">
+            <input type="text" placeholder="Email Address" ng-model="formData.email">
+        </div>
+
+        <div class="row">
+            <input type="password" placeholder="Password" ng-model="formData.password">
+        </div>
+
+        <div class="row" ng-show="error">Invalid credentials</div>
+
+    </div>
+
+    <div class="row">
+        <button class="login-submit" ng-click="$login()">LOGIN</button>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div ui-sref="welcome1" class="cancel-btn"><a href="#">Cancel</a></div>
+        </div>
+    </div>
+
+</div>

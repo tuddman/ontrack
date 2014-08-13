@@ -1,0 +1,55 @@
+<ion-view title="Account">
+  <ion-content class="has-header padding">
+
+<div ng-controller="StudentCtrl">
+  <div class="row">
+    <div class="col col-25">
+      Cumulative GPA (so far):
+    </div>
+    <div class="col col-25">
+    <input type="number" ng-model="student.cumulativeGPA">
+    </div>
+    <div class="col col-50">
+      {{student.cumulativeGPA}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-25">
+       Cumulative Credits earned (so far):
+    </div>
+    <div class="col col-25">
+    <input type="number" ng-model="student.cumulativeCredits">
+    </div>
+    <div class="col col-50">
+      {{student.cumulativeCredits}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-25">
+        Pell Grants Total (so far):
+    </div>
+    <div class="col col-25">
+	<input type="number" ng-model="student.pellGrantTotal">
+    </div>
+    <div class="col col-50">
+	{{student.pellGrantTotal}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-25">
+	TAP Grants Total (so far):
+    </div>
+    <div class="col col-25">
+	<input type="number" ng-model="student.tapGrantTotal">
+    </div>
+    <div class="col col-50">
+	{{student.tapGrantTotal}}
+    </div>
+  </div>
+</div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<div class="step3-wrapper">
+
+    <div class="row">
+        <div class="step-completion-bar col col-80 col-offset-10">
+            <div class="row">
+                <div class="amount-completed col"></div>
+            </div>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="col col-center">
+             <div class="step-title">
+                <p>STEP 4: SELECT YOUR COURSES</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <ul class="list">
+
+                <li class="item item-checkbox" ng-repeat="course in courses track by $index">
+                    {{course.courseName}}
+                    ({{course.credits}} credits)
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="formData.coursesSelected[$index]" ng-true-value="{{course.id}}">
+                    </label>
+                </li>
+
+            </ul>
+        
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="button">Track Your Summer GPA</button>
+            <div class="cancel-btn"><a href="#/welcome1">Cancel</a></div>
+        </div>
+    </div>
+
+    <label ng-show="accountCreateError">Account creation error</label>
+
+</div>
